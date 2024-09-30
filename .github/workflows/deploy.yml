@@ -27,11 +27,6 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Deploy via SCP
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SERVER_USER: ${{ secrets.SERVER_USER }}
-          SERVER_IP: ${{ secrets.SERVER_IP }}
-          SERVER_DESTINATION: ${{ secrets.SERVER_DESTINATION }}
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
