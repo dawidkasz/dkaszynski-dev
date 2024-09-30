@@ -8,7 +8,13 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
+    env:
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      SERVER_IP: ${{ vars.SERVER_IP }}
+      SSH_PORT: ${{ vars.SSH_PORT }}
+      SSH_USER: ${{ vars.SSH_USER }}
+      SSH_SERVER: ${{ vars.SSH_SERVER }}
+      SERVER_DESTINATION: ${{ vars.SERVER_DESTINATION }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
