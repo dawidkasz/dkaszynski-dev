@@ -1,10 +1,10 @@
-title: Jekyll Serial Programmer
+title: Dawid Kaszyński
 markdown: kramdown
 
 # for atom feed
 author:
-  name: Sharad Raj Singh Maurya
-  email: dev_sharad@outlook.com
+  name: Dawid Kaszyński
+  email: dkaszynski04@gmail.com
 
 plugins:
   - jemoji
